@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="inputan" style="text-align: center; margin-top: 50px;">
+
+    <input type="text" id="input1" placeholder="Nama">
+    <input type="text" id="input2" placeholder="Kelas">
+    <input type="text" id="input3" placeholder="Jurusan">
+    <input type="text" id="input4" placeholder="Bio">
+
+    <br><br>
+
+    <button onclick="tambah()">Tambah</button>
+
+</div>
+
+<div id="hasil" style="display: none; text-align: center; background-color: #f10f6d; padding: 20px;"></div>
+
+<script>
+function hideInputan() {
+    let inputan = document.getElementById("inputan");
+    inputan.style.display = "none";
+}
+
+function tambah() {
+
+    let input = document.getElementById("input1").value;
+    let input2 = document.getElementById("input2").value;
+    let input3 = document.getElementById("input3").value;
+    let input4 = document.getElementById("input4").value;
+
+    let p = document.createElement("p");
+    p.innerHTML = "Nama: " + input;
+    document.getElementById("hasil").appendChild(p);
+
+    let p2 = document.createElement("p");
+    p2.innerHTML = "Kelas: " + input2;
+    document.getElementById("hasil").appendChild(p2);
+
+    let p3 = document.createElement("p");
+    p3.innerHTML = "Jurusan: " + input3;
+    document.getElementById("hasil").appendChild(p3);
+
+    let p4 = document.createElement("p");
+    p4.innerHTML = "Bio: " + input4;
+    document.getElementById("hasil").appendChild(p4);
+
+    hideInputan();
+
+    let hasil = document.getElementById("hasil");
+    hasil.style.display = "block";
+}
+</script>
+</body>
+</html>

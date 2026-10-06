@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="judul">CANDRA</h1>
+    <button onclick="gantiNama()">Ganti Nama</button>"
+    <script>
+        function gantiNama() {
+            let nama = document.getElementById("judul");
+            nama.innerText = "ANDRA";
+        }
+    </script>
+    <div id="hasil"></div>
+<button onclick="tambah()">Klik Saya</button>
+
+<script>
+function tambah() {
+    let elemen = document.createElement("p");
+    elemen.textContent = "Teks baru muncul!";
+    document.getElementById("hasil").appendChild(elemen);
+}
+</script>
+    <p id="hapus">Selamat datang!</p>
+<button onclick="hapusTeks()">Klik</button>
+
+<script>
+function hapusTeks() {
+    document.getElementById("hapus").remove();
+}
+</script>
+
+
+
+</body>
+</html>
